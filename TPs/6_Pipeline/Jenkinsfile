@@ -1,0 +1,63 @@
+
+pipeline {
+  agent any
+  tools {
+      maven 'M3' 
+  }
+ stages {
+    stage('Unit') {
+      steps {
+	// Build application
+
+        stash includes: '**/target/*.war', name: 'webapp'
+      }
+    }
+    
+    
+    stage('Parallel Stage') {
+
+      parallel {
+        stage('Integration tests') {
+          agent any
+          steps {  
+            echo 
+            sh "./mvnw -Pintegration integration-test"
+          }
+        }
+        stage('Qualité') {
+          agent any
+          steps {  
+            // Start an analysis
+          }
+        }
+      }
+    }
+    stage("Quality Gate") {
+      steps {
+	  // attendre le résultat de l'analyse        
+       }
+    }
+    stage("Nexus snapshot-deployement") {
+      steps {
+          // Déploiement Nexus
+        
+       }
+    }
+    stage('Validation métier') {
+/* Execution seulement sur master */
+      agent none     
+       input {
+          message "Déploiement en prod ?"
+          ok "Oui "
+          parameters {
+            string(name: 'DATA_CENTER', defaultValue: 'Paris', description: 'Data Center où déployer')
+          }
+        }
+      steps {
+	// Faire une release
+      }
+    }
+
+ }           
+}
+ 
