@@ -1,0 +1,10 @@
+commit 384320d4198524e339936cb67cb310709d09f7ee
+tree 7f63911d71830f54ae84acebdb4c6ce86b8789ee
+parent 9fb04432fa4ee97ed2b18e9dce4540a61aceed9e
+author David Thibau <david.thibau@gmail.com> 2019-12-11 10:14:14 +0100
+committer David Thibau <david.thibau@gmail.com> 2019-12-11 10:14:14 +0100
+
+    JUnit fail
+
+
+:100644 100644 90cefdf5337848b17c1c67b88acf7c0dcf052e83 1885378b719ad693f0985e19e59949e4b9d46f73 M	library/src/test/java/hello/service/MyServiceTest.java

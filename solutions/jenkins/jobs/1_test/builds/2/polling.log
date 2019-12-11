@@ -1,0 +1,9 @@
+Started on 11 déc. 2019 09:54:00
+Using strategy: Default
+No credentials specified
+ > git --version # timeout=10
+ > git ls-remote -h -- /home/stage/multi-module # timeout=10
+Found 1 remote heads on /home/stage/multi-module
+[poll] Latest remote head revision on refs/heads/master is: ae65eabf29c4d97cd25eb2786702d921ef6f17e8
+Done. Took 65 ms
+Changes found

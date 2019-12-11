@@ -1,0 +1,288 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<build>
+  <actions>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <hudson.model.Cause_-UserIdCause>
+            <userId>dthibau</userId>
+          </hudson.model.Cause_-UserIdCause>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+    <hudson.plugins.git.util.BuildData plugin="git@4.0.0">
+      <buildsByBranchName>
+        <entry>
+          <string>refs/remotes/origin/master</string>
+          <hudson.plugins.git.util.Build>
+            <marked plugin="git-client@3.0.0">
+              <sha1>3f67b181e1fc3d64a5a650867c858cb8c2cb1203</sha1>
+              <branches class="list">
+                <hudson.plugins.git.Branch>
+                  <sha1 reference="../../../sha1"/>
+                  <name>refs/remotes/origin/master</name>
+                </hudson.plugins.git.Branch>
+              </branches>
+            </marked>
+            <revision reference="../marked"/>
+            <hudsonBuildNumber>3</hudsonBuildNumber>
+          </hudson.plugins.git.util.Build>
+        </entry>
+      </buildsByBranchName>
+      <lastBuild reference="../buildsByBranchName/entry/hudson.plugins.git.util.Build"/>
+      <remoteUrls>
+        <string>/home/stage/multi-module</string>
+      </remoteUrls>
+    </hudson.plugins.git.util.BuildData>
+    <hudson.plugins.git.GitTagAction plugin="git@4.0.0">
+      <tags class="hudson.util.CopyOnWriteMap$Tree">
+        <entry>
+          <string>refs/remotes/origin/master</string>
+          <list/>
+        </entry>
+      </tags>
+      <ws>/home/stage/.jenkins/workspace/pipeline_legacy/1_package</ws>
+    </hudson.plugins.git.GitTagAction>
+    <hudson.scm.SCMRevisionState_-None/>
+    <join.JoinAction plugin="join@1.21">
+      <pendingDownstreamProjects class="linked-list"/>
+      <completedDownstreamProjects class="linked-list">
+        <string>pipeline_legacy/2_integrationtests</string>
+        <string>pipeline_legacy/2_analyse</string>
+      </completedDownstreamProjects>
+      <consideredBuilds class="linked-list">
+        <string>pipeline_legacy/2_integrationtests #2</string>
+        <string>pipeline_legacy/2_analyse #3</string>
+      </consideredBuilds>
+      <joinPublishers/>
+      <resultThreshold>SUCCESS</resultThreshold>
+      <overallResult>SUCCESS</overallResult>
+    </join.JoinAction>
+    <hudson.tasks.junit.TestResultAction plugin="junit@1.28">
+      <descriptions class="concurrent-hash-map"/>
+      <failCount>0</failCount>
+      <skipCount>0</skipCount>
+      <totalCount>2</totalCount>
+      <healthScaleFactor>1.0</healthScaleFactor>
+      <testData/>
+    </hudson.tasks.junit.TestResultAction>
+    <hudson.plugins.parameterizedtrigger.CapturedEnvironmentAction plugin="parameterized-trigger@2.35.2">
+      <env serialization="custom">
+        <unserializable-parents/>
+        <tree-map>
+          <default>
+            <comparator class="hudson.util.CaseInsensitiveComparator"/>
+          </default>
+          <int>93</int>
+          <string>_</string>
+          <string>/usr/bin/java</string>
+          <string>BUILD_DISPLAY_NAME</string>
+          <string>#3</string>
+          <string>BUILD_ID</string>
+          <string>3</string>
+          <string>BUILD_NUMBER</string>
+          <string>3</string>
+          <string>BUILD_TAG</string>
+          <string>jenkins-pipeline_legacy-1_package-3</string>
+          <string>BUILD_URL</string>
+          <string>http://localhost:8080/job/pipeline_legacy/job/1_package/3/</string>
+          <string>CLASSPATH</string>
+          <string></string>
+          <string>CLUTTER_IM_MODULE</string>
+          <string>xim</string>
+          <string>COLORTERM</string>
+          <string>truecolor</string>
+          <string>DBUS_SESSION_BUS_ADDRESS</string>
+          <string>unix:path=/run/user/1000/bus</string>
+          <string>DESKTOP_SESSION</string>
+          <string>ubuntu</string>
+          <string>DISPLAY</string>
+          <string>:0</string>
+          <string>EXECUTOR_NUMBER</string>
+          <string>1</string>
+          <string>GDMSESSION</string>
+          <string>ubuntu</string>
+          <string>GIT_BRANCH</string>
+          <string>origin/master</string>
+          <string>GIT_COMMIT</string>
+          <string>3f67b181e1fc3d64a5a650867c858cb8c2cb1203</string>
+          <string>GIT_PREVIOUS_COMMIT</string>
+          <string>3f67b181e1fc3d64a5a650867c858cb8c2cb1203</string>
+          <string>GIT_PREVIOUS_SUCCESSFUL_COMMIT</string>
+          <string>3f67b181e1fc3d64a5a650867c858cb8c2cb1203</string>
+          <string>GIT_URL</string>
+          <string>/home/stage/multi-module</string>
+          <string>GJS_DEBUG_OUTPUT</string>
+          <string>stderr</string>
+          <string>GJS_DEBUG_TOPICS</string>
+          <string>JS ERROR;JS LOG</string>
+          <string>GNOME_DESKTOP_SESSION_ID</string>
+          <string>this-is-deprecated</string>
+          <string>GNOME_SHELL_SESSION_MODE</string>
+          <string>ubuntu</string>
+          <string>GNOME_TERMINAL_SCREEN</string>
+          <string>/org/gnome/Terminal/screen/2ec94f95_16c4_4d7e_ae1b_5858f715e639</string>
+          <string>GNOME_TERMINAL_SERVICE</string>
+          <string>:1.65</string>
+          <string>GPG_AGENT_INFO</string>
+          <string>/run/user/1000/gnupg/S.gpg-agent:0:1</string>
+          <string>GTK_IM_MODULE</string>
+          <string>ibus</string>
+          <string>GTK_MODULES</string>
+          <string>gail:atk-bridge</string>
+          <string>HOME</string>
+          <string>/home/stage</string>
+          <string>HUDSON_HOME</string>
+          <string>/home/stage/.jenkins</string>
+          <string>HUDSON_SERVER_COOKIE</string>
+          <string>ef3b926adbc00c42</string>
+          <string>HUDSON_URL</string>
+          <string>http://localhost:8080/</string>
+          <string>IM_CONFIG_PHASE</string>
+          <string>2</string>
+          <string>JAVA_HOME</string>
+          <string>/usr/lib/jvm/java-8-openjdk-amd64/</string>
+          <string>JENKINS_HOME</string>
+          <string>/home/stage/.jenkins</string>
+          <string>JENKINS_SERVER_COOKIE</string>
+          <string>ef3b926adbc00c42</string>
+          <string>JENKINS_URL</string>
+          <string>http://localhost:8080/</string>
+          <string>JOB_BASE_NAME</string>
+          <string>1_package</string>
+          <string>JOB_DISPLAY_URL</string>
+          <string>http://localhost:8080/job/pipeline_legacy/job/1_package/display/redirect</string>
+          <string>JOB_NAME</string>
+          <string>pipeline_legacy/1_package</string>
+          <string>JOB_URL</string>
+          <string>http://localhost:8080/job/pipeline_legacy/job/1_package/</string>
+          <string>LANG</string>
+          <string>fr_FR.UTF-8</string>
+          <string>LANGUAGE</string>
+          <string>fr_FR:en_US:en</string>
+          <string>LC_ADDRESS</string>
+          <string>fr_FR.UTF-8</string>
+          <string>LC_IDENTIFICATION</string>
+          <string>fr_FR.UTF-8</string>
+          <string>LC_MEASUREMENT</string>
+          <string>fr_FR.UTF-8</string>
+          <string>LC_MONETARY</string>
+          <string>fr_FR.UTF-8</string>
+          <string>LC_NAME</string>
+          <string>fr_FR.UTF-8</string>
+          <string>LC_NUMERIC</string>
+          <string>fr_FR.UTF-8</string>
+          <string>LC_PAPER</string>
+          <string>fr_FR.UTF-8</string>
+          <string>LC_TELEPHONE</string>
+          <string>fr_FR.UTF-8</string>
+          <string>LC_TIME</string>
+          <string>fr_FR.UTF-8</string>
+          <string>LESSCLOSE</string>
+          <string>/usr/bin/lesspipe %s %s</string>
+          <string>LESSOPEN</string>
+          <string>| /usr/bin/lesspipe %s</string>
+          <string>LOGNAME</string>
+          <string>stage</string>
+          <string>LS_COLORS</string>
+          <string>rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:</string>
+          <string>NO_AT_BRIDGE</string>
+          <string>1</string>
+          <string>NO_GAIL</string>
+          <string>1</string>
+          <string>NODE_LABELS</string>
+          <string>master</string>
+          <string>NODE_NAME</string>
+          <string>master</string>
+          <string>OLDPWD</string>
+          <string>/home/stage</string>
+          <string>PAPERSIZE</string>
+          <string>a4</string>
+          <string>PATH</string>
+          <string>/usr/lib/jvm/java-8-openjdk-amd64//bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin</string>
+          <string>PATH+JDK</string>
+          <string>/usr/lib/jvm/java-8-openjdk-amd64//bin</string>
+          <string>PWD</string>
+          <string>/home/stage/jenkins</string>
+          <string>QT4_IM_MODULE</string>
+          <string>xim</string>
+          <string>QT_ACCESSIBILITY</string>
+          <string>1</string>
+          <string>QT_IM_MODULE</string>
+          <string>xim</string>
+          <string>RUN_CHANGES_DISPLAY_URL</string>
+          <string>http://localhost:8080/job/pipeline_legacy/job/1_package/3/display/redirect?page=changes</string>
+          <string>RUN_DISPLAY_URL</string>
+          <string>http://localhost:8080/job/pipeline_legacy/job/1_package/3/display/redirect</string>
+          <string>SESSION_MANAGER</string>
+          <string>local/ubuntu:@/tmp/.ICE-unix/1610,unix/ubuntu:/tmp/.ICE-unix/1610</string>
+          <string>SHELL</string>
+          <string>/bin/bash</string>
+          <string>SHLVL</string>
+          <string>1</string>
+          <string>SSH_AGENT_PID</string>
+          <string>1729</string>
+          <string>SSH_AUTH_SOCK</string>
+          <string>/run/user/1000/keyring/ssh</string>
+          <string>TERM</string>
+          <string>xterm-256color</string>
+          <string>USER</string>
+          <string>stage</string>
+          <string>USERNAME</string>
+          <string>stage</string>
+          <string>VTE_VERSION</string>
+          <string>5401</string>
+          <string>WINDOWPATH</string>
+          <string>2</string>
+          <string>WORKSPACE</string>
+          <string>/home/stage/.jenkins/workspace/pipeline_legacy/1_package</string>
+          <string>XAUTHORITY</string>
+          <string>/run/user/1000/gdm/Xauthority</string>
+          <string>XDG_CONFIG_DIRS</string>
+          <string>/etc/xdg/xdg-ubuntu:/etc/xdg</string>
+          <string>XDG_CURRENT_DESKTOP</string>
+          <string>ubuntu:GNOME</string>
+          <string>XDG_DATA_DIRS</string>
+          <string>/usr/share/ubuntu:/usr/local/share:/usr/share:/var/lib/snapd/desktop</string>
+          <string>XDG_MENU_PREFIX</string>
+          <string>gnome-</string>
+          <string>XDG_RUNTIME_DIR</string>
+          <string>/run/user/1000</string>
+          <string>XDG_SEAT</string>
+          <string>seat0</string>
+          <string>XDG_SESSION_DESKTOP</string>
+          <string>ubuntu</string>
+          <string>XDG_SESSION_ID</string>
+          <string>2</string>
+          <string>XDG_SESSION_TYPE</string>
+          <string>x11</string>
+          <string>XDG_VTNR</string>
+          <string>2</string>
+          <string>XMODIFIERS</string>
+          <string>@im=ibus</string>
+        </tree-map>
+        <hudson.EnvVars>
+          <default>
+            <platform>UNIX</platform>
+          </default>
+        </hudson.EnvVars>
+      </env>
+    </hudson.plugins.parameterizedtrigger.CapturedEnvironmentAction>
+  </actions>
+  <queueId>16</queueId>
+  <timestamp>1576064560346</timestamp>
+  <startTime>1576064560363</startTime>
+  <result>SUCCESS</result>
+  <duration>55700</duration>
+  <charset>UTF-8</charset>
+  <keepLog>false</keepLog>
+  <builtOn></builtOn>
+  <workspace>/home/stage/.jenkins/workspace/pipeline_legacy/1_package</workspace>
+  <hudsonVersion>2.190.3</hudsonVersion>
+  <scm class="hudson.plugins.git.GitChangeLogParser" plugin="git@4.0.0">
+    <authorOrCommitter>false</authorOrCommitter>
+    <showEntireCommitSummaryInChanges>true</showEntireCommitSummaryInChanges>
+  </scm>
+  <culprits class="com.google.common.collect.EmptyImmutableSortedSet"/>
+</build>

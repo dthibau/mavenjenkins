@@ -1,0 +1,62 @@
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building gs-multi-module-library 0.0.1
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[8mha:////4Gz7fUUghDjfdZio3VhhVOqIF5ko4XIEXbSkLkypXtT8AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ gs-multi-module-library ---
+[INFO] Deleting /home/stage/.jenkins/workspace/1_test/library/target
+[INFO] 
+[8mha:////4Gz7fUUghDjfdZio3VhhVOqIF5ko4XIEXbSkLkypXtT8AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- jacoco-maven-plugin:0.8.2:prepare-agent (default) @ gs-multi-module-library ---
+[INFO] argLine set to -javaagent:/home/stage/repo/org/jacoco/org.jacoco.agent/0.8.2/org.jacoco.agent-0.8.2-runtime.jar=destfile=/home/stage/.jenkins/workspace/1_test/library/target/jacoco.exec
+[INFO] 
+[8mha:////4Gz7fUUghDjfdZio3VhhVOqIF5ko4XIEXbSkLkypXtT8AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ gs-multi-module-library ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/stage/.jenkins/workspace/1_test/library/src/main/resources
+[INFO] skip non existing resourceDirectory /home/stage/.jenkins/workspace/1_test/library/src/main/resources
+[INFO] 
+[8mha:////4Gz7fUUghDjfdZio3VhhVOqIF5ko4XIEXbSkLkypXtT8AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ gs-multi-module-library ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 2 source files to /home/stage/.jenkins/workspace/1_test/library/target/classes
+[INFO] 
+[8mha:////4Gz7fUUghDjfdZio3VhhVOqIF5ko4XIEXbSkLkypXtT8AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ gs-multi-module-library ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/stage/.jenkins/workspace/1_test/library/src/test/resources
+[INFO] 
+[8mha:////4Gz7fUUghDjfdZio3VhhVOqIF5ko4XIEXbSkLkypXtT8AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ gs-multi-module-library ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /home/stage/.jenkins/workspace/1_test/library/target/test-classes
+[INFO] -------------------------------------------------------------
+[8mha:////4OrugSBT1Ntwcyz4xRrPm8Q5CvbiRzLkSSBHiegnCayUAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[8mha:////4OrugSBT1Ntwcyz4xRrPm8Q5CvbiRzLkSSBHiegnCayUAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] /home/stage/.jenkins/workspace/1_test/library/src/test/java/hello/service/MyServiceTest.java:[22,9] cannot find symbol
+  symbol:   method assertTrue(boolean)
+  location: class hello.service.MyServiceTest
+[INFO] 1 error
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary:
+[INFO] 
+[INFO] gs-multi-module .................................... SUCCESS [  2.610 s]
+[INFO] gs-multi-module-library ............................ FAILURE [  2.956 s]
+[INFO] gs-multi-module-application ........................ SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 8.431 s
+[INFO] Finished at: 2019-12-11T10:12:11+01:00
+[INFO] Final Memory: 39M/225M
+[INFO] ------------------------------------------------------------------------
+[8mha:////4OrugSBT1Ntwcyz4xRrPm8Q5CvbiRzLkSSBHiegnCayUAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project gs-multi-module-library: Compilation failure
+[8mha:////4OrugSBT1Ntwcyz4xRrPm8Q5CvbiRzLkSSBHiegnCayUAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] /home/stage/.jenkins/workspace/1_test/library/src/test/java/hello/service/MyServiceTest.java:[22,9] cannot find symbol
+[8mha:////4OrugSBT1Ntwcyz4xRrPm8Q5CvbiRzLkSSBHiegnCayUAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] symbol:   method assertTrue(boolean)
+[8mha:////4OrugSBT1Ntwcyz4xRrPm8Q5CvbiRzLkSSBHiegnCayUAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] location: class hello.service.MyServiceTest
+[8mha:////4OrugSBT1Ntwcyz4xRrPm8Q5CvbiRzLkSSBHiegnCayUAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] -> [Help 1]
+[8mha:////4OrugSBT1Ntwcyz4xRrPm8Q5CvbiRzLkSSBHiegnCayUAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] 
+[8mha:////4OrugSBT1Ntwcyz4xRrPm8Q5CvbiRzLkSSBHiegnCayUAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[8mha:////4OrugSBT1Ntwcyz4xRrPm8Q5CvbiRzLkSSBHiegnCayUAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[8mha:////4OrugSBT1Ntwcyz4xRrPm8Q5CvbiRzLkSSBHiegnCayUAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] 
+[8mha:////4OrugSBT1Ntwcyz4xRrPm8Q5CvbiRzLkSSBHiegnCayUAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[8mha:////4OrugSBT1Ntwcyz4xRrPm8Q5CvbiRzLkSSBHiegnCayUAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+[8mha:////4OrugSBT1Ntwcyz4xRrPm8Q5CvbiRzLkSSBHiegnCayUAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] 
+[8mha:////4OrugSBT1Ntwcyz4xRrPm8Q5CvbiRzLkSSBHiegnCayUAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] After correcting the problems, you can resume the build with the command
+[8mha:////4OrugSBT1Ntwcyz4xRrPm8Q5CvbiRzLkSSBHiegnCayUAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR]   mvn <goals> -rf :gs-multi-module-library

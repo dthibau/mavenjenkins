@@ -1,0 +1,10 @@
+commit 1e704941667880d6a3a157d19d7943dc418b95a4
+tree 4be370c1cf8b4907c1a52d52dd4d0064a2fa732d
+parent 384320d4198524e339936cb67cb310709d09f7ee
+author David Thibau <david.thibau@gmail.com> 2019-12-11 10:21:30 +0100
+committer David Thibau <david.thibau@gmail.com> 2019-12-11 10:21:30 +0100
+
+    Restore test
+
+
+:100644 100644 1885378b719ad693f0985e19e59949e4b9d46f73 b7f4425bba403d196dc6f03b4e19a85fd91f101b M	library/src/test/java/hello/service/MyServiceTest.java

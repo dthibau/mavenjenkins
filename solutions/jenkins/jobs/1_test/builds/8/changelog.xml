@@ -1,0 +1,10 @@
+commit 3f67b181e1fc3d64a5a650867c858cb8c2cb1203
+tree a3c0f95c750d55b88e1cba038ccfffce9467f7d5
+parent 1e704941667880d6a3a157d19d7943dc418b95a4
+author David Thibau <david.thibau@gmail.com> 2019-12-11 10:50:33 +0100
+committer David Thibau <david.thibau@gmail.com> 2019-12-11 10:50:33 +0100
+
+    Conf. sonar
+
+
+:000000 100644 0000000000000000000000000000000000000000 b782558977dc8c467d47d9f6259853db1882ea9b A	sonar.properties

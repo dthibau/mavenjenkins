@@ -1,0 +1,382 @@
+Démarré par le projet amont "[8mha:////4CqnDLQKRaiRbOn4Q29Kb8/lbA+zWFn1YGTVwSTIZ1ZZAAAAqx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzJEgZl/az8JP2CzIJUoI2p8Tmp6YnJlWAxw/iCxOTsxPRUfQC+DtzI2AAAAA==[0mpipeline_legacy/1_package" de numéro de build [8mha:////4NIyKUzhBSsv00BsufPsPbqAmqTK7xXLEjZKU3hL10tbAAAAqx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLQIwSBhX9rPwk/YLMglSgjanxOanpicmVYDHD+ILE5OzE9FR9YwDAJ2X72QAAAA==[0m3
+originally caused by:
+ Démarré par l'utilisateur [8mha:////4KXcl/sgpMin3zCv3Sm0mvZqFXxDJMx6x7YQW9iJIesyAAAAmR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyeEgZe/dLi1CL9lJKMzKTEUgCPY/oJwgAAAA==[0mDavid THIBAU
+Running as SYSTEM
+Building in workspace /home/stage/.jenkins/workspace/pipeline_legacy/2_analyse
+No credentials specified
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url /home/stage/multi-module # timeout=10
+Fetching upstream changes from /home/stage/multi-module
+ > git --version # timeout=10
+ > git fetch --tags --progress -- /home/stage/multi-module +refs/heads/*:refs/remotes/origin/* # timeout=10
+Checking out Revision 3f67b181e1fc3d64a5a650867c858cb8c2cb1203 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 3f67b181e1fc3d64a5a650867c858cb8c2cb1203 # timeout=10
+Commit message: "Conf. sonar"
+ > git rev-list --no-walk 3f67b181e1fc3d64a5a650867c858cb8c2cb1203 # timeout=10
+[2_analyse] $ /bin/sh -xe /tmp/jenkins6834623802044057202.sh
++ ./mvnw clean test sonar:sonar
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] gs-multi-module
+[INFO] gs-multi-module-library
+[INFO] gs-multi-module-application
+[WARNING] The POM for org.eclipse.m2e:lifecycle-mapping:jar:1.0.0 is missing, no dependency information available
+[WARNING] Failed to retrieve plugin descriptor for org.eclipse.m2e:lifecycle-mapping:1.0.0: Plugin org.eclipse.m2e:lifecycle-mapping:1.0.0 or one of its dependencies could not be resolved: Failure to find org.eclipse.m2e:lifecycle-mapping:jar:1.0.0 in http://localhost:8081/repository/maven-public/ was cached in the local repository, resolution will not be reattempted until the update interval of central has elapsed or updates are forced
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building gs-multi-module 0.0.1
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ gs-multi-module ---
+[INFO] Deleting /home/stage/.jenkins/workspace/pipeline_legacy/2_analyse/target
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.2:prepare-agent (default) @ gs-multi-module ---
+[INFO] argLine set to -javaagent:/home/stage/repo/org/jacoco/org.jacoco.agent/0.8.2/org.jacoco.agent-0.8.2-runtime.jar=destfile=/home/stage/.jenkins/workspace/pipeline_legacy/2_analyse/target/jacoco.exec
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.2:report (report) @ gs-multi-module ---
+[INFO] Skipping JaCoCo execution due to missing execution data file.
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building gs-multi-module-library 0.0.1
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ gs-multi-module-library ---
+[INFO] Deleting /home/stage/.jenkins/workspace/pipeline_legacy/2_analyse/library/target
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.2:prepare-agent (default) @ gs-multi-module-library ---
+[INFO] argLine set to -javaagent:/home/stage/repo/org/jacoco/org.jacoco.agent/0.8.2/org.jacoco.agent-0.8.2-runtime.jar=destfile=/home/stage/.jenkins/workspace/pipeline_legacy/2_analyse/library/target/jacoco.exec
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ gs-multi-module-library ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/stage/.jenkins/workspace/pipeline_legacy/2_analyse/library/src/main/resources
+[INFO] skip non existing resourceDirectory /home/stage/.jenkins/workspace/pipeline_legacy/2_analyse/library/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ gs-multi-module-library ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 2 source files to /home/stage/.jenkins/workspace/pipeline_legacy/2_analyse/library/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ gs-multi-module-library ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/stage/.jenkins/workspace/pipeline_legacy/2_analyse/library/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ gs-multi-module-library ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /home/stage/.jenkins/workspace/pipeline_legacy/2_analyse/library/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ gs-multi-module-library ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running hello.service.MyServiceTest
+12:44:14.152 [main] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class hello.service.MyServiceTest]
+12:44:14.196 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+12:44:14.303 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+12:44:14.658 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [hello.service.MyServiceTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+12:44:14.804 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [hello.service.MyServiceTest], using SpringBootContextLoader
+12:44:14.838 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [hello.service.MyServiceTest]: class path resource [hello/service/MyServiceTest-context.xml] does not exist
+12:44:14.846 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [hello.service.MyServiceTest]: class path resource [hello/service/MyServiceTestContext.groovy] does not exist
+12:44:14.848 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [hello.service.MyServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+12:44:15.338 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [hello.service.MyServiceTest]
+12:44:16.527 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [hello.service.MyServiceTest]: using defaults.
+12:44:16.541 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+12:44:16.619 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [javax/servlet/ServletContext]
+12:44:16.633 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [org/springframework/transaction/TransactionDefinition]
+12:44:16.644 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttribute]
+12:44:16.645 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@3f81621c, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@5b9499fe, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@74d6736, org.springframework.test.context.support.DirtiesContextTestExecutionListener@52a33c3f, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@668625f5, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@19a20bb2, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@75babb67, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3eb3232b, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@69cd1085]
+12:44:16.650 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [hello.service.MyServiceTest]
+12:44:16.652 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [hello.service.MyServiceTest]
+12:44:16.658 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [hello.service.MyServiceTest]
+12:44:16.664 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [hello.service.MyServiceTest]
+12:44:16.667 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [hello.service.MyServiceTest]
+12:44:16.668 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [hello.service.MyServiceTest]
+12:44:16.725 [main] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@7f4701b1 testClass = MyServiceTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [MergedContextConfiguration@adcfad9 testClass = MyServiceTest, locations = '{}', classes = '{class hello.service.MyServiceTest$TestConfiguration}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{service.message=Hello, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@773e2eb5, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@1a35993f, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@4f8b4bd0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@6ee8dcd3], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map[[empty]]], class annotated with @DirtiesContext [false] with mode [null].
+12:44:16.728 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [hello.service.MyServiceTest]
+12:44:16.729 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [hello.service.MyServiceTest]
+12:44:16.779 [main] DEBUG org.springframework.test.context.support.DependencyInjectionTestExecutionListener - Performing dependency injection for test context [[DefaultTestContext@7f4701b1 testClass = MyServiceTest, testInstance = hello.service.MyServiceTest@70025b99, testMethod = [null], testException = [null], mergedContextConfiguration = [MergedContextConfiguration@adcfad9 testClass = MyServiceTest, locations = '{}', classes = '{class hello.service.MyServiceTest$TestConfiguration}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{service.message=Hello, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@773e2eb5, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@1a35993f, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@4f8b4bd0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@6ee8dcd3], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map[[empty]]]].
+12:44:17.016 [main] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, service.message=Hello, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=-1}
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.1.6.RELEASE)
+
+2019-12-11 12:44:19.507  INFO 11019 --- [           main] hello.service.MyServiceTest              : Starting MyServiceTest on ubuntu with PID 11019 (started by stage in /home/stage/.jenkins/workspace/pipeline_legacy/2_analyse/library)
+2019-12-11 12:44:19.512  INFO 11019 --- [           main] hello.service.MyServiceTest              : No active profile set, falling back to default profiles: default
+2019-12-11 12:44:24.696  INFO 11019 --- [           main] hello.service.MyServiceTest              : Started MyServiceTest in 7.67 seconds (JVM running for 15.975)
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 14.262 s - in hello.service.MyServiceTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.2:report (report) @ gs-multi-module-library ---
+[INFO] Loading execution data file /home/stage/.jenkins/workspace/pipeline_legacy/2_analyse/library/target/jacoco.exec
+[INFO] Analyzed bundle 'gs-multi-module-library' with 2 classes
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building gs-multi-module-application 0.0.1
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ gs-multi-module-application ---
+[INFO] Deleting /home/stage/.jenkins/workspace/pipeline_legacy/2_analyse/application/target
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.2:prepare-agent (default) @ gs-multi-module-application ---
+[INFO] argLine set to -javaagent:/home/stage/repo/org/jacoco/org.jacoco.agent/0.8.2/org.jacoco.agent-0.8.2-runtime.jar=destfile=/home/stage/.jenkins/workspace/pipeline_legacy/2_analyse/application/target/jacoco.exec
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ gs-multi-module-application ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 0 resource
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ gs-multi-module-application ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /home/stage/.jenkins/workspace/pipeline_legacy/2_analyse/application/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ gs-multi-module-application ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/stage/.jenkins/workspace/pipeline_legacy/2_analyse/application/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ gs-multi-module-application ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /home/stage/.jenkins/workspace/pipeline_legacy/2_analyse/application/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ gs-multi-module-application ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running hello.app.DemoApplicationTest
+12:44:35.361 [main] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class hello.app.DemoApplicationTest]
+12:44:35.405 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+12:44:35.553 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+12:44:35.821 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [hello.app.DemoApplicationTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+12:44:35.971 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [hello.app.DemoApplicationTest], using SpringBootContextLoader
+12:44:36.023 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [hello.app.DemoApplicationTest]: class path resource [hello/app/DemoApplicationTest-context.xml] does not exist
+12:44:36.025 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [hello.app.DemoApplicationTest]: class path resource [hello/app/DemoApplicationTestContext.groovy] does not exist
+12:44:36.026 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [hello.app.DemoApplicationTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+12:44:36.040 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [hello.app.DemoApplicationTest]: DemoApplicationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+12:44:36.390 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [hello.app.DemoApplicationTest]
+12:44:37.230 [main] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/home/stage/.jenkins/workspace/pipeline_legacy/2_analyse/application/target/classes/hello/app/DemoApplication.class]
+12:44:37.233 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration hello.app.DemoApplication for test class hello.app.DemoApplicationTest
+12:44:38.463 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [hello.app.DemoApplicationTest]: using defaults.
+12:44:38.473 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+12:44:38.668 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [org/springframework/transaction/TransactionDefinition]
+12:44:38.674 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttribute]
+12:44:38.676 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@8c43966, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1efac5b9, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@11a3a45f, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@69796bd0, org.springframework.test.context.support.DirtiesContextTestExecutionListener@40df6090, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@8c0a23f, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@44d7e24, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@26c8b296, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@1d289d3f, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@10f405ff]
+12:44:38.692 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [hello.app.DemoApplicationTest]
+12:44:38.693 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [hello.app.DemoApplicationTest]
+12:44:38.713 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [hello.app.DemoApplicationTest]
+12:44:38.714 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [hello.app.DemoApplicationTest]
+12:44:38.715 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [hello.app.DemoApplicationTest]
+12:44:38.715 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [hello.app.DemoApplicationTest]
+12:44:38.807 [main] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@1118d539 testClass = DemoApplicationTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@601d6622 testClass = DemoApplicationTest, locations = '{}', classes = '{class hello.app.DemoApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@27c04377, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@723ed581, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@9255c05, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@4b54af3d], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true]], class annotated with @DirtiesContext [false] with mode [null].
+12:44:38.823 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [hello.app.DemoApplicationTest]
+12:44:38.828 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [hello.app.DemoApplicationTest]
+12:44:39.073 [main] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=-1}
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.1.6.RELEASE)
+
+2019-12-11 12:44:42.796  INFO 11120 --- [           main] hello.app.DemoApplicationTest            : Starting DemoApplicationTest on ubuntu with PID 11120 (started by stage in /home/stage/.jenkins/workspace/pipeline_legacy/2_analyse/application)
+2019-12-11 12:44:42.817  INFO 11120 --- [           main] hello.app.DemoApplicationTest            : No active profile set, falling back to default profiles: default
+2019-12-11 12:45:03.837  INFO 11120 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-11 12:45:09.873  INFO 11120 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2019-12-11 12:45:10.306  INFO 11120 --- [           main] hello.app.DemoApplicationTest            : Started DemoApplicationTest in 31.102 seconds (JVM running for 39.756)
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 39.328 s - in hello.app.DemoApplicationTest
+2019-12-11 12:45:13.296  INFO 11120 --- [       Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.2:report (report) @ gs-multi-module-application ---
+[INFO] Loading execution data file /home/stage/.jenkins/workspace/pipeline_legacy/2_analyse/application/target/jacoco.exec
+[INFO] Analyzed bundle 'gs-multi-module-application' with 1 classes
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building gs-multi-module 0.0.1
+[INFO] ------------------------------------------------------------------------
+[WARNING] The POM for org.eclipse.m2e:lifecycle-mapping:jar:1.0.0 is missing, no dependency information available
+[WARNING] Failed to retrieve plugin descriptor for org.eclipse.m2e:lifecycle-mapping:1.0.0: Plugin org.eclipse.m2e:lifecycle-mapping:1.0.0 or one of its dependencies could not be resolved: Failure to find org.eclipse.m2e:lifecycle-mapping:jar:1.0.0 in http://localhost:8081/repository/maven-public/ was cached in the local repository, resolution will not be reattempted until the update interval of central has elapsed or updates are forced
+[INFO] 
+[INFO] --- sonar-maven-plugin:3.7.0.1746:sonar (default-cli) @ gs-multi-module ---
+[INFO] User cache: /home/stage/.sonar/cache
+[INFO] SonarQube version: 7.9.1
+[INFO] Default locale: "fr_FR", source code encoding: "UTF-8"
+[WARNING] SonarScanner will require Java 11+ to run starting in SonarQube 8.x
+[INFO] Load global settings
+[INFO] Load global settings (done) | time=291ms
+[INFO] Server id: BF41A1F2-AW7wNL9H19q9a8774j_z
+[INFO] User cache: /home/stage/.sonar/cache
+[INFO] Load/download plugins
+[INFO] Load plugins index
+[INFO] Load plugins index (done) | time=131ms
+[INFO] Load/download plugins (done) | time=292ms
+[INFO] Process project properties
+[INFO] Execute project builders
+[INFO] Execute project builders (done) | time=22ms
+[INFO] Project key: com.example:gs-multi-module
+[INFO] Base dir: /home/stage/.jenkins/workspace/pipeline_legacy/2_analyse
+[INFO] Working dir: /home/stage/.jenkins/workspace/pipeline_legacy/2_analyse/target/sonar
+[INFO] Load project settings for component key: 'com.example:gs-multi-module'
+[INFO] Load project settings for component key: 'com.example:gs-multi-module' (done) | time=69ms
+[INFO] Load quality profiles
+[INFO] Load quality profiles (done) | time=245ms
+[INFO] Detected Jenkins
+[INFO] Load active rules
+[INFO] Load active rules (done) | time=5659ms
+[INFO] Indexing files...
+[INFO] Project configuration:
+[INFO]   Excluded sources: **/*Application.java
+[INFO] Indexing files of module 'gs-multi-module-application'
+[INFO]   Base dir: /home/stage/.jenkins/workspace/pipeline_legacy/2_analyse/application
+[INFO]   Source paths: pom.xml, src/main/java
+[INFO]   Test paths: src/test/java
+[INFO]   Excluded sources: **/*Application.java
+[INFO] Indexing files of module 'gs-multi-module-library'
+[INFO]   Base dir: /home/stage/.jenkins/workspace/pipeline_legacy/2_analyse/library
+[INFO]   Source paths: pom.xml, src/main/java
+[INFO]   Test paths: src/test/java
+[INFO]   Excluded sources: **/*Application.java
+[INFO] Indexing files of module 'gs-multi-module'
+[INFO]   Base dir: /home/stage/.jenkins/workspace/pipeline_legacy/2_analyse
+[INFO]   Source paths: pom.xml
+[INFO]   Excluded sources: **/*Application.java
+[INFO] 7 files indexed
+[INFO] 0 files ignored because of inclusion/exclusion patterns
+[INFO] 0 files ignored because of scm ignore settings
+[INFO] Quality profile for java: Sonar way
+[INFO] Quality profile for xml: Sonar way
+[INFO] ------------- Run sensors on module gs-multi-module-library
+[INFO] Load metrics repository
+[INFO] Load metrics repository (done) | time=156ms
+[INFO] Sensor JavaSquidSensor [java]
+[INFO] Configured Java source version (sonar.java.source): 8
+[INFO] JavaClasspath initialization
+[INFO] JavaClasspath initialization (done) | time=36ms
+[INFO] JavaTestClasspath initialization
+[INFO] JavaTestClasspath initialization (done) | time=7ms
+[INFO] Java Main Files AST scan
+[INFO] 2 source files to be analyzed
+[INFO] Load project repositories
+[INFO] Load project repositories (done) | time=67ms
+[INFO] 2/2 source files have been analyzed
+[INFO] Java Main Files AST scan (done) | time=1662ms
+[INFO] Java Test Files AST scan
+[INFO] 1 source files to be analyzed
+[INFO] 1/1 source files have been analyzed
+[INFO] Java Test Files AST scan (done) | time=629ms
+[INFO] Sensor JavaSquidSensor [java] (done) | time=4086ms
+[INFO] Sensor JaCoCo XML Report Importer [jacoco]
+[INFO] Sensor JaCoCo XML Report Importer [jacoco] (done) | time=37ms
+[INFO] Sensor SurefireSensor [java]
+[INFO] parsing [/home/stage/.jenkins/workspace/pipeline_legacy/2_analyse/library/target/surefire-reports]
+[INFO] Sensor SurefireSensor [java] (done) | time=103ms
+[INFO] Sensor JaCoCoSensor [java]
+[INFO] Sensor JaCoCoSensor [java] (done) | time=15ms
+[INFO] Sensor JavaXmlSensor [java]
+[INFO] 1 source files to be analyzed
+[INFO] Sensor JavaXmlSensor [java] (done) | time=494ms
+[INFO] 1/1 source files have been analyzed
+[INFO] Sensor HTML [web]
+[INFO] Sensor HTML [web] (done) | time=53ms
+[INFO] Sensor XML Sensor [xml]
+[INFO] 1 source files to be analyzed
+[INFO] 1/1 source files have been analyzed
+[INFO] Sensor XML Sensor [xml] (done) | time=330ms
+[INFO] ------------- Run sensors on module gs-multi-module-application
+[INFO] Sensor JavaSquidSensor [java]
+[INFO] Configured Java source version (sonar.java.source): 8
+[INFO] JavaClasspath initialization
+[INFO] JavaClasspath initialization (done) | time=2ms
+[INFO] JavaTestClasspath initialization
+[INFO] JavaTestClasspath initialization (done) | time=3ms
+[INFO] Java Main Files AST scan
+[INFO] 0 source files to be analyzed
+[INFO] Java Main Files AST scan (done) | time=1ms
+[INFO] Java Test Files AST scan
+[INFO] 1 source files to be analyzed
+[INFO] 0/0 source files have been analyzed
+[INFO] 1/1 source files have been analyzed
+[INFO] Java Test Files AST scan (done) | time=370ms
+[INFO] Sensor JavaSquidSensor [java] (done) | time=420ms
+[INFO] Sensor JaCoCo XML Report Importer [jacoco]
+[INFO] Sensor JaCoCo XML Report Importer [jacoco] (done) | time=6ms
+[INFO] Sensor SurefireSensor [java]
+[INFO] parsing [/home/stage/.jenkins/workspace/pipeline_legacy/2_analyse/application/target/surefire-reports]
+[INFO] Sensor SurefireSensor [java] (done) | time=35ms
+[INFO] Sensor JaCoCoSensor [java]
+[INFO] Sensor JaCoCoSensor [java] (done) | time=10ms
+[INFO] Sensor JavaXmlSensor [java]
+[INFO] 1 source files to be analyzed
+[INFO] Sensor JavaXmlSensor [java] (done) | time=57ms
+[INFO] Sensor HTML [web]
+[INFO] 1/1 source files have been analyzed
+[INFO] Sensor HTML [web] (done) | time=2ms
+[INFO] Sensor XML Sensor [xml]
+[INFO] 1 source files to be analyzed
+[INFO] 1/1 source files have been analyzed
+[INFO] Sensor XML Sensor [xml] (done) | time=82ms
+[INFO] ------------- Run sensors on module gs-multi-module
+[INFO] Sensor JaCoCo XML Report Importer [jacoco]
+[INFO] Sensor JaCoCo XML Report Importer [jacoco] (done) | time=1ms
+[INFO] Sensor JavaXmlSensor [java]
+[INFO] 1 source files to be analyzed
+[INFO] Sensor JavaXmlSensor [java] (done) | time=52ms
+[INFO] 1/1 source files have been analyzed
+[INFO] Sensor HTML [web]
+[INFO] Sensor HTML [web] (done) | time=4ms
+[INFO] Sensor XML Sensor [xml]
+[INFO] 1 source files to be analyzed
+[INFO] 1/1 source files have been analyzed
+[INFO] Sensor XML Sensor [xml] (done) | time=35ms
+[INFO] ------------- Run sensors on project
+[INFO] Sensor Zero Coverage Sensor
+[INFO] Sensor Zero Coverage Sensor (done) | time=1ms
+[INFO] Sensor Java CPD Block Indexer
+[INFO] Sensor Java CPD Block Indexer (done) | time=45ms
+[INFO] 2 files had no CPD blocks
+[INFO] Calculating CPD for 0 files
+[INFO] CPD calculation finished
+[INFO] Analysis report generated in 231ms, dir size=98 KB
+[INFO] Analysis report compressed in 82ms, zip size=21 KB
+[INFO] Analysis report uploaded in 127ms
+[INFO] ANALYSIS SUCCESSFUL, you can browse http://localhost:9000/dashboard?id=com.example%3Ags-multi-module
+[INFO] Note that you will be able to access the updated dashboard once the server has processed the submitted analysis report
+[INFO] More about the report processing at http://localhost:9000/api/ce/task?id=AW70x3COB0B5nBSjXmyw
+[INFO] Analysis total time: 20.593 s
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary:
+[INFO] 
+[INFO] gs-multi-module .................................... SUCCESS [ 27.617 s]
+[INFO] gs-multi-module-library ............................ SUCCESS [ 28.335 s]
+[INFO] gs-multi-module-application ........................ SUCCESS [ 45.322 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 01:50 min
+[INFO] Finished at: 2019-12-11T12:45:41+01:00
+[INFO] Final Memory: 63M/458M
+[INFO] ------------------------------------------------------------------------
+Notifying upstream projects of job completion
+Notifying upstream of completion: pipeline_legacy/1_package #3
+All downstream projects complete!
+Notifying upstream build pipeline_legacy/1_package #3 of job completion
+Lancement d'un nouveau build de [8mha:////4OPg4/MyUmJTHqD87UhEDyhQ+lm4sMYK6rg/Sqg9n6ehAAAAqh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAypEgYl/az8JP2CzIJUoI2p8Tmp6YnJlWAx4/iU1IKc/Ep9AGnk9FLXAAAA[0mpipeline_legacy » 3_deploy
+Finished: SUCCESS

@@ -1,0 +1,50 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<build>
+  <actions>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <hudson.model.Cause_-UpstreamCause>
+            <upstreamProject>pipeline_legacy/2_analyse</upstreamProject>
+            <upstreamUrl>job/pipeline_legacy/job/2_analyse/</upstreamUrl>
+            <upstreamBuild>3</upstreamBuild>
+            <upstreamCauses>
+              <hudson.model.Cause_-UpstreamCause>
+                <upstreamProject>pipeline_legacy/1_package</upstreamProject>
+                <upstreamUrl>job/pipeline_legacy/job/1_package/</upstreamUrl>
+                <upstreamBuild>3</upstreamBuild>
+                <upstreamCauses>
+                  <hudson.model.Cause_-UserIdCause>
+                    <userId>dthibau</userId>
+                  </hudson.model.Cause_-UserIdCause>
+                </upstreamCauses>
+              </hudson.model.Cause_-UpstreamCause>
+            </upstreamCauses>
+          </hudson.model.Cause_-UpstreamCause>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+    <hudson.plugins.copyartifact.CopyArtifact_-EnvAction plugin="copyartifact@1.43"/>
+    <hudson.tasks.Fingerprinter_-FingerprintAction>
+      <record>
+        <entry>
+          <string>gs-multi-module-application-0.0.1.jar</string>
+          <string>a3fa6a13bac9acd7260510aab699fe0b</string>
+        </entry>
+      </record>
+    </hudson.tasks.Fingerprinter_-FingerprintAction>
+  </actions>
+  <queueId>19</queueId>
+  <timestamp>1576064750076</timestamp>
+  <startTime>1576064750099</startTime>
+  <result>SUCCESS</result>
+  <duration>386</duration>
+  <charset>UTF-8</charset>
+  <keepLog>false</keepLog>
+  <builtOn></builtOn>
+  <workspace>/home/stage/.jenkins/workspace/pipeline_legacy/3_deploy</workspace>
+  <hudsonVersion>2.190.3</hudsonVersion>
+  <scm class="hudson.scm.NullChangeLogParser"/>
+  <culprits class="com.google.common.collect.EmptyImmutableSortedSet"/>
+</build>

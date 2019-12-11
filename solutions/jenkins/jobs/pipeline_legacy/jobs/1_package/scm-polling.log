@@ -1,0 +1,10 @@
+Started on 11 déc. 2019 14:19:00
+Using strategy: Default
+[poll] Last Built Revision: Revision 3f67b181e1fc3d64a5a650867c858cb8c2cb1203 (refs/remotes/origin/master)
+No credentials specified
+ > git --version # timeout=10
+ > git ls-remote -h -- /home/stage/multi-module # timeout=10
+Found 1 remote heads on /home/stage/multi-module
+[poll] Latest remote head revision on refs/heads/master is: 3f67b181e1fc3d64a5a650867c858cb8c2cb1203 - already built by 3
+Done. Took 58 ms
+No changes

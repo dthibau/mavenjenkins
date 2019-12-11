@@ -1,0 +1,47 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<hudson.maven.MavenBuild plugin="maven-plugin@3.4">
+  <actions>
+    <hudson.maven.reporters.MavenArtifactRecord>
+      <records/>
+      <parent reference="../../.."/>
+      <pomArtifact>
+        <groupId>com.example</groupId>
+        <artifactId>gs-multi-module-application</artifactId>
+        <version>0.0.1</version>
+        <type>pom</type>
+        <fileName>pom.xml</fileName>
+        <canonicalName>gs-multi-module-application-0.0.1.pom</canonicalName>
+        <md5sum>70b7ffff5be7932a0356fe88e6502d48</md5sum>
+      </pomArtifact>
+      <mainArtifact reference="../pomArtifact"/>
+      <attachedArtifacts/>
+      <repositoryId>nexus-releases</repositoryId>
+      <repositoryUrl>http://localhost:8081/repository/maven-releases/</repositoryUrl>
+    </hudson.maven.reporters.MavenArtifactRecord>
+    <hudson.tasks.Fingerprinter_-FingerprintAction>
+      <record>
+        <entry>
+          <string>org.springframework.boot:spring-boot-dependencies:spring-boot-dependencies-2.1.6.RELEASE.pom</string>
+          <string>db0f0d53d06758848d344b9652aaa4e3</string>
+        </entry>
+        <entry>
+          <string>com.example:gs-multi-module:gs-multi-module-0.0.1.pom</string>
+          <string>a21ef17501acccb227ad85af679a8f09</string>
+        </entry>
+        <entry>
+          <string>org.springframework.boot:spring-boot-starter-parent:spring-boot-starter-parent-2.1.6.RELEASE.pom</string>
+          <string>cd806904a8253c696dea0bbe98f035e6</string>
+        </entry>
+      </record>
+    </hudson.tasks.Fingerprinter_-FingerprintAction>
+  </actions>
+  <queueId>-1</queueId>
+  <timestamp>1576055516495</timestamp>
+  <startTime>1576055532372</startTime>
+  <result>NOT_BUILT</result>
+  <duration>3</duration>
+  <charset>UTF-8</charset>
+  <keepLog>false</keepLog>
+  <builtOn></builtOn>
+  <workspace>/home/stage/.jenkins/workspace/1_test/application</workspace>
+</hudson.maven.MavenBuild>

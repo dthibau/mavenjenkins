@@ -1,0 +1,24 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<result plugin="junit@1.28">
+  <suites>
+    <suite>
+      <file>/home/stage/.jenkins/workspace/1_test/library/target/surefire-reports/TEST-hello.service.MyServiceTest.xml</file>
+      <name>hello.service.MyServiceTest</name>
+      <duration>6.37</duration>
+      <time>6.37</time>
+      <enclosingBlocks/>
+      <enclosingBlockNames/>
+      <cases>
+        <case>
+          <duration>0.805</duration>
+          <className>hello.service.MyServiceTest</className>
+          <testName>contextLoads</testName>
+          <skipped>false</skipped>
+          <failedSince>0</failedSince>
+        </case>
+      </cases>
+    </suite>
+  </suites>
+  <duration>6.37</duration>
+  <keepLongStdio>false</keepLongStdio>
+</result>
