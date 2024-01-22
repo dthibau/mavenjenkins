@@ -1,0 +1,57 @@
+pipeline {
+   agent none 
+
+    triggers {
+        pollSCM 'H/5 * * * *'
+    }
+
+    stages {
+        stage('Compile et tests') {
+             agent {
+                docker { 
+                    image 'openjdk:8-jdk-alpine' 
+                    args '-v $HOME/.m2:/root/.m2'
+                }
+            }
+            steps {
+                sh './mvnw clean integration-test'
+                archiveArtifacts 'target/*.war'
+                stash includes : 'target/*.war', name : 'webapp'
+            }
+            post {
+                always {
+                    junit '**/target/surefire-reports/*.xml'
+                }
+            }
+        }
+        stage('Analyse qualité') {
+            agent {
+                docker { 
+                    image 'openjdk:8-jdk-alpine' 
+                    args '-v $HOME/.m2:/root/.m2'
+                }
+            }       
+            steps {
+                echo "QUALITY ANALYSIS"
+//                sh './mvnw clean verify sonar:sonar'
+            }
+        }
+            
+        stage('Building docker image') {
+            // Construire et publier une image docker
+            agent any
+            steps {
+                echo "Building docker images"
+                script {
+                    def dockerImage = docker.build('dthibau/catalog', 'src/main/docker')
+                    docker.withRegistry('https://registry.hub.docker.com', 'dthibau_docker') {
+                        dockerImage.push "build-${env.BUILD_ID}"
+                    }
+                }
+            }
+        }
+
+     }
+    
+}
+
