@@ -1,8 +1,5 @@
 package org.formation.controller.mvc;
 
-import javax.persistence.EntityNotFoundException;
-import javax.validation.Valid;
-
 import org.formation.model.Fournisseur;
 import org.formation.model.FournisseurRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +9,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import jakarta.persistence.EntityNotFoundException;
+import jakarta.validation.Valid;
 
 @Controller
 @RequestMapping("/fournisseurs")

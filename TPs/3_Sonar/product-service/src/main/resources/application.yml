@@ -16,8 +16,10 @@ management:
         
 ---
 spring:
-  profiles:
-    prod
+  config:
+    activate:
+      on-profile:
+        prod
 
   datasource:
     password: postgres

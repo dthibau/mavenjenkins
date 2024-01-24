@@ -4,8 +4,6 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import javax.persistence.EntityNotFoundException;
-
 import org.formation.controller.rest.ResultImportDto;
 import org.formation.controller.rest.UpdateLineDto;
 import org.formation.model.FournisseurRepository;
@@ -13,6 +11,8 @@ import org.formation.model.Produit;
 import org.formation.model.ProduitRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import jakarta.persistence.EntityNotFoundException;
 
 @Service
 public class ImportProduitService {

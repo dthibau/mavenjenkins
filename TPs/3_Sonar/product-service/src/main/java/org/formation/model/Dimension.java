@@ -1,8 +1,6 @@
 package org.formation.model;
 
-import javax.persistence.Embeddable;
-
-
+import jakarta.persistence.Embeddable;
 import lombok.Getter;
 import lombok.Setter;
 

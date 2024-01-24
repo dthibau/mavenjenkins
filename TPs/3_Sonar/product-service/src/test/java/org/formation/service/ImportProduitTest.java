@@ -10,14 +10,14 @@ import java.nio.file.Paths;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import javax.persistence.EntityNotFoundException;
-
 import org.formation.controller.rest.ResultImportDto;
 import org.formation.model.Produit;
 import org.formation.model.ProduitRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+
+import jakarta.persistence.EntityNotFoundException;
 
 @SpringBootTest
 public class ImportProduitTest {
