@@ -1,15 +1,13 @@
 
 pipeline {
   agent any
-  tools {
-      maven 'M3' 
-  }
+
  stages {
     stage('Unit') {
       steps {
 	// Build application
 
-        stash includes: '**/target/*.war', name: 'webapp'
+        echo 'Unit Test en packaging'
       }
     }
     
@@ -20,27 +18,29 @@ pipeline {
         stage('Integration tests') {
           agent any
           steps {  
-            echo 
-            sh "./mvnw -Pintegration integration-test"
+            echo 'Test intégration'
+            // sh "./mvnw -Pintegration integration-test"
           }
         }
         stage('Qualité') {
           agent any
           steps {  
             // Start an analysis
+            echo 'Qualité '
           }
         }
       }
     }
     stage("Quality Gate") {
       steps {
-	  // attendre le résultat de l'analyse        
+	  // attendre le résultat de l'analyse 
+    echo 'Watch quality gate'       
        }
     }
     stage("Nexus snapshot-deployement") {
       steps {
           // Déploiement Nexus
-        
+        echo 'Déploiement snapshot'
        }
     }
     stage('Validation métier') {
@@ -55,6 +55,7 @@ pipeline {
         }
       steps {
 	// Faire une release
+        echo 'Validation métier'
       }
     }
 
