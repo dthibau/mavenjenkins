@@ -3,11 +3,10 @@ pipeline {
   agent any
 
  stages {
-    stage('Unit') {
+    stage('Tests unitaires') {
       steps {
-	// Build application
-
-        echo 'Unit Test en packaging'
+        // Publier systématiquement les tests, envoyer un mail si échec
+        echo 'Exécution des tests unitaires'
       }
     }
     
@@ -15,18 +14,18 @@ pipeline {
     stage('Parallel Stage') {
 
       parallel {
-        stage('Integration tests') {
+        stage('Analyse de vulnérabilités') {
           agent any
           steps {  
-            echo 'Test intégration'
-            // sh "./mvnw -Pintegration integration-test"
+            echo 'Démarrage plugin OWASP'
+
           }
         }
         stage('Qualité') {
           agent any
           steps {  
             // Start an analysis
-            echo 'Qualité '
+            echo 'Démarrage Analyse Sonar '
           }
         }
       }
@@ -34,7 +33,7 @@ pipeline {
     stage("Quality Gate") {
       steps {
 	  // attendre le résultat de l'analyse 
-    echo 'Watch quality gate'       
+    	echo 'Watch quality gate'       
        }
     }
     stage("Nexus snapshot-deployement") {
@@ -43,19 +42,20 @@ pipeline {
         echo 'Déploiement snapshot'
        }
     }
-    stage('Validation métier') {
-/* Execution seulement sur master */
+    stage('Release') {
+    /* Execution seulement sur master */
       agent none     
-       input {
-          message "Déploiement en prod ?"
-          ok "Oui "
-          parameters {
-            string(name: 'DATA_CENTER', defaultValue: 'Paris', description: 'Data Center où déployer')
-          }
-        }
       steps {
 	// Faire une release
-        echo 'Validation métier'
+        echo 'Release'
+      }
+    }
+    stage('Déploiement sur DataCenter') {
+	/* Execution seulement sur master */
+      agent none     
+      steps {
+	
+        echo 'Déploiement sur un data center'
       }
     }
 
